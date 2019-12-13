@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1>Sudoku Game</h1>
 
     <table>
         <tr>
@@ -135,11 +136,14 @@
     </table>
 
 
-    <button onclick="chk();">Проверить судоку</button>
-    <button onclick="clr();">Clear</button>
+    <button class="btnBl" onclick="chk();">Check Board</button>
+    <button class="btnClr" onclick="clr();">Clear</button>
     <br>
-    <button onclick="lvl1();">Level 1</button>
-    <button onclick="lvl1right();">Level 1 - решение</button>
+    <button class="btnBl" onclick="lvl1();">Level 1</button>
+    <button class="btnGrn" onclick="lvl1right();">Level 1 - decision</button>
+    <br>
+    <button class="btnBl" onclick="lvl2();">Level 2</button>
+    <button class="btnGrn" onclick="lvl2right();">Level 2 - decision</button>
 
     <br>
     <span id="res"></span>

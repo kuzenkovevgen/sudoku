@@ -5,6 +5,7 @@ body {
     background-color: black;
     color:white;
     text-align:center ;
+    font-family: monospace;
 }
 
 h1 {
@@ -24,6 +25,7 @@ input {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
+    font-family: inherit;
 }
 
 td {
@@ -34,17 +36,32 @@ td {
 
 button {
     position: relative;
-    height: 30px;
+    height: 25px;
     width: 155px;
     margin: 5px;
     text-align: center;
     font-weight:bold;
-    font-size:15PX;
+    font-size:13PX;
     color:white;
     background-color:black;
     Border:1px solid white ;
+    font-family: inherit;
 }
-button:hover {
+
+.btnBl:hover {
+    background-color:blue;
+    transition:0.5s;
+}
+.btnClr:hover {
+    background-color:red;
+    transition:0.5s;
+}
+.btnGrn:hover {
     background-color:green;
     transition:0.5s;
 }
+
+span {
+    font-size: 17px;
+}
+
