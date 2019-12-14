@@ -44,163 +44,65 @@ function chk() {                            //запуск скрипта
         }
     }
 
-    //начало расчёта сумм квадратов
+    //расчёт сумм квадратов 1-3
 
-
-    var sumSqr1 = 0;
-
-    for (let i = 0; i < 3; i++) {
-        let sumSqrI = 0;
-        for (let cols = 0; cols < 3; cols++) {
-            sumSqrI += table[i][cols];
+    for (let j = 0; j < 9; j = j + 3) {
+        var sumSqr13 = 0;
+        for (let i = 0; i < 3; i++) {
+            let sumSqrI = 0;
+            for (let cols = j; cols < (j + 3); cols++) {
+                sumSqrI += table[i][cols];
+            }
+            sumSqr13 += sumSqrI;
         }
-        sumSqr1 += sumSqrI;
-    }
-    if (sumSqr1 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 1 " + sumSqr1);
-
-
-    // следующий
-    var sumSqr2 = 0;
-
-    for (let i = 0; i < 3; i++) {
-        let sumSqrI = 0;
-        for (let cols = 3; cols < 6; cols++) {
-            sumSqrI += table[i][cols];
+        if (sumSqr13 == sumN) {
+            result.push("true");
         }
-        sumSqr2 += sumSqrI;
+        else {
+            result.push("false");
+        }
+        console.log("сумма квадрата " + (j / 3 + 1) + " " + sumSqr13);
     }
-    if (sumSqr2 == sumN) {
-        result.push("true");
+
+    //расчёт сумм квадратов 4-6
+
+    for (let j = 0; j < 9; j = j + 3) {
+        var sumSqr46 = 0;
+        for (let i = 3; i < 6; i++) {
+            let sumSqrI = 0;
+            for (let cols = j; cols < (j + 3); cols++) {
+                sumSqrI += table[i][cols];
+            }
+            sumSqr46 += sumSqrI;
+        }
+        if (sumSqr46 == sumN) {
+            result.push("true");
+        }
+        else {
+            result.push("false");
+        }
+        console.log("сумма квадрата " + (j / 3 + 4) + " " + sumSqr46);
     }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 2 " + sumSqr2);
+
     //следующий
-    var sumSqr3 = 0;
-
-    for (let i = 0; i < 3; i++) {
-        let sumSqrI = 0;
-        for (let cols = 6; cols < 9; cols++) {
-            sumSqrI += table[i][cols];
+    for (let j = 0; j < 9; j = j + 3) {
+        var sumSqr79 = 0;
+        for (let i = 6; i < 9; i++) {
+            let sumSqrI = 0;
+            for (let cols = j; cols < (j + 3); cols++) {
+                sumSqrI += table[i][cols];
+            }
+            sumSqr79 += sumSqrI;
         }
-        sumSqr3 += sumSqrI;
-    }
-    if (sumSqr3 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 3 " + sumSqr3);
-    //следующий
-    var sumSqr4 = 0;
-
-    for (let i = 3; i < 6; i++) {
-        let sumSqrI = 0;
-        for (let cols = 0; cols < 3; cols++) {
-            sumSqrI += table[i][cols];
+        if (sumSqr79 == sumN) {
+            result.push("true");
         }
-        sumSqr4 += sumSqrI;
-    }
-    if (sumSqr4 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 4 " + sumSqr4);
-    //следующий
-    var sumSqr5 = 0;
-
-    for (let i = 3; i < 6; i++) {
-        let sumSqrI = 0;
-        for (let cols = 3; cols < 6; cols++) {
-            sumSqrI += table[i][cols];
+        else {
+            result.push("false");
         }
-        sumSqr5 += sumSqrI;
+        console.log("сумма квадрата " + (j / 3 + 7) + " " + sumSqr79);
     }
-    if (sumSqr5 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 5 " + sumSqr5);
-    //следующий
-    var sumSqr6 = 0;
 
-    for (let i = 3; i < 6; i++) {
-        let sumSqrI = 0;
-        for (let cols = 6; cols < 9; cols++) {
-            sumSqrI += table[i][cols];
-        }
-        sumSqr6 += sumSqrI;
-    }
-    if (sumSqr6 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 6 " + sumSqr6);
-    //следующий
-    var sumSqr7 = 0;
-
-    for (let i = 6; i < 9; i++) {
-        let sumSqrI = 0;
-        for (let cols = 0; cols < 3; cols++) {
-            sumSqrI += table[i][cols];
-        }
-        sumSqr7 += sumSqrI;
-    }
-    if (sumSqr7 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 7 " + sumSqr7);
-    //следующий
-    var sumSqr8 = 0;
-
-    for (let i = 6; i < 9; i++) {
-        let sumSqrI = 0;
-        for (let cols = 3; cols < 6; cols++) {
-            sumSqrI += table[i][cols];
-        }
-        sumSqr8 += sumSqrI;
-    }
-    if (sumSqr8 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 8 " + sumSqr8);
-    //следующий
-    var sumSqr9 = 0;
-
-    for (let i = 6; i < 9; i++) {
-        let sumSqrI = 0;
-        for (let cols = 6; cols < 9; cols++) {
-            sumSqrI += table[i][cols];
-        }
-        sumSqr9 += sumSqrI;
-    }
-    if (sumSqr9 == sumN) {
-        result.push("true");
-    }
-    else {
-        result.push("false");
-    }
-    console.log("сумма квадрата 9 " + sumSqr9);
     //закончили с квадратами
 
     //приступаем к диагоналям
@@ -217,8 +119,7 @@ function chk() {                            //запуск скрипта
     }
     console.log("сумма 2 диагонали " + diag2);
 
-
-    console.log(result[0]);                     //проверочная хрень
+    console.log(result[0]);                             //проверочная хрень
     var right = result.every(function (x) {             //проверка элементов проверочного массива
         return x == "true";
     })
@@ -227,10 +128,14 @@ function chk() {                            //запуск скрипта
     console.log(result);
 
     if (right == true) {
-        res.innerHTML = "Судоку решено верно";
+        res.innerHTML = "Correct";
+        let span = document.getElementById('res').style;
+        span.color = "green";
     }
     else {
-        res.innerHTML = "Судоку решено неверно";
+        res.innerHTML = "Wrong";
+        let span = document.getElementById('res').style;
+        span.color = "red";
     }
 }
 

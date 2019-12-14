@@ -6,6 +6,14 @@ body {
     color:white;
     text-align:center ;
     font-family: monospace;
+    animation-name: bodyAnmtn;
+    animation-duration: 2s;
+}
+
+@keyframes bodyAnmtn {
+    0% {
+        opacity: 0.1;
+    }
 }
 
 h1 {
@@ -63,8 +71,10 @@ button {
 }
 
 span {
-    font-size: 17px;
+    font-size: 20px;
+    animation-duration: unset;
 }
+
 .spacer {
     width:7px;
     height:5px;
