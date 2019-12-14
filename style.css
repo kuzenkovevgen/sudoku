@@ -17,6 +17,7 @@ h1 {
 table {
     position: relative;
     margin: auto;
+    border-collapse: collapse;
 }
 
 input {
@@ -37,7 +38,7 @@ td {
 button {
     position: relative;
     height: 25px;
-    width: 155px;
+    width: 160px;
     margin: 5px;
     text-align: center;
     font-weight:bold;
@@ -63,5 +64,9 @@ button {
 
 span {
     font-size: 17px;
+}
+.spacer {
+    width:7px;
+    height:5px;
 }
 
